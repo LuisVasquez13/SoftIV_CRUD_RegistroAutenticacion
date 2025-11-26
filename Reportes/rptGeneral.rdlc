@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition"
+        xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+	<rd:ReportID>6d7a5e58-c2c3-4c64-bc35-f03f8cc9e115</rd:ReportID>
+	<Width>8.5in</Width>
+
+	<Body>
+		<ReportItems>
+
+			<!-- TABLA PRINCIPAL -->
+			<Tablix Name="TablixGeneral">
+				<TablixBody>
+
+					<!-- Columnas -->
+					<TablixColumns>
+						<TablixColumn>
+							<Width>1in</Width>
+						</TablixColumn>
+						<TablixColumn>
+							<Width>1.5in</Width>
+						</TablixColumn>
+						<TablixColumn>
+							<Width>1.2in</Width>
+						</TablixColumn>
+						<TablixColumn>
+							<Width>1in</Width>
+						</TablixColumn>
+						<TablixColumn>
+							<Width>1in</Width>
+						</TablixColumn>
+						<TablixColumn>
+							<Width>1.3in</Width>
+						</TablixColumn>
+					</TablixColumns>
+
+					<!-- Filas -->
+					<TablixRows>
+
+						<!-- Fila Encabezado -->
+						<TablixRow>
+							<Height>0.3in</Height>
+							<TablixCells>
+
+								<!-- ENCABEZADOS -->
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="txtH1">
+											<Style>
+												<BackgroundColor>#D6EAF8</BackgroundColor>
+												<FontWeight>Bold</FontWeight>
+												<BorderColor>
+													<Default>Gray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>ID</Value>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="txtH2">
+											<Style>
+												<BackgroundColor>#D6EAF8</BackgroundColor>
+												<FontWeight>Bold</FontWeight>
+												<BorderColor>
+													<Default>Gray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>Nombre</Value>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="txtH3">
+											<Style>
+												<BackgroundColor>#D6EAF8</BackgroundColor>
+												<FontWeight>Bold</FontWeight>
+												<BorderColor>
+													<Default>Gray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>Categoría</Value>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="txtH4">
+											<Style>
+												<BackgroundColor>#D6EAF8</BackgroundColor>
+												<FontWeight>Bold</FontWeight>
+												<BorderColor>
+													<Default>Gray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>Precio</Value>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="txtH5">
+											<Style>
+												<BackgroundColor>#D6EAF8</BackgroundColor>
+												<FontWeight>Bold</FontWeight>
+												<BorderColor>
+													<Default>Gray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>Cantidad</Value>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="txtH6">
+											<Style>
+												<BackgroundColor>#D6EAF8</BackgroundColor>
+												<FontWeight>Bold</FontWeight>
+												<BorderColor>
+													<Default>Gray</Default>
+												</BorderColor>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>Fecha Ingreso</Value>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+
+							</TablixCells>
+						</TablixRow>
+
+						<!-- Fila Datos -->
+						<TablixRow>
+							<Height>0.25in</Height>
+							<TablixCells>
+
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="txtID">
+											<Style>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!Id.Value</Value>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="txtNombre">
+											<Style>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!Nombre.Value</Value>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="txtCategoria">
+											<Style>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!Categoria.Value</Value>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="txtPrecio">
+											<Style>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!Precio.Value</Value>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="txtCantidad">
+											<Style>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!Cantidad.Value</Value>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+
+								<TablixCell>
+									<CellContents>
+										<Textbox Name="txtFecha">
+											<Style>
+												<BorderStyle>
+													<Default>Solid</Default>
+												</BorderStyle>
+											</Style>
+											<Paragraphs>
+												<Paragraph>
+													<TextRuns>
+														<TextRun>
+															<Value>=Fields!FechaIngreso.Value</Value>
+														</TextRun>
+													</TextRuns>
+												</Paragraph>
+											</Paragraphs>
+										</Textbox>
+									</CellContents>
+								</TablixCell>
+
+							</TablixCells>
+						</TablixRow>
+
+					</TablixRows>
+
+				</TablixBody>
+
+				<!-- Origen de Datos -->
+				<DataSetName>dsGeneral</DataSetName>
+
+				<TablixRowHierarchy>
+					<TablixMembers>
+						<TablixMember/>
+						<TablixMember/>
+					</TablixMembers>
+				</TablixRowHierarchy>
+
+				<TablixColumnHierarchy>
+					<TablixMembers>
+						<TablixMember/>
+						<TablixMember/>
+						<TablixMember/>
+						<TablixMember/>
+						<TablixMember/>
+						<TablixMember/>
+					</TablixMembers>
+				</TablixColumnHierarchy>
+
+			</Tablix>
+
+		</ReportItems>
+
+		<Height>3in</Height>
+	</Body>
+
+	<!-- DATASET -->
+	<DataSets>
+		<DataSet Name="dsGeneral">
+			<Fields>
+				<Field Name="Id">
+					<DataField>Id</DataField>
+				</Field>
+				<Field Name="Nombre">
+					<DataField>Nombre</DataField>
+				</Field>
+				<Field Name="Categoria">
+					<DataField>Categoria</DataField>
+				</Field>
+				<Field Name="Precio">
+					<DataField>Precio</DataField>
+				</Field>
+				<Field Name="Cantidad">
+					<DataField>Cantidad</DataField>
+				</Field>
+				<Field Name="FechaIngreso">
+					<DataField>FechaIngreso</DataField>
+				</Field>
+			</Fields>
+		</DataSet>
+	</DataSets>
+
+</Report>
