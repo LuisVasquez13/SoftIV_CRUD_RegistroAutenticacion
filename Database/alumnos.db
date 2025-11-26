@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS Alumnos (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Nombre TEXT NOT NULL,
+    Cedula TEXT NOT NULL,
+    Carrera TEXT NOT NULL,
+    Semestre TEXT NOT NULL,
+    Jornada TEXT NOT NULL,
+    Usuario TEXT NOT NULL,
+    Contrasena TEXT NOT NULL,
+    RecibirNotificaciones INTEGER NOT NULL,
+    FechaRegistro TEXT NOT NULL
+);
